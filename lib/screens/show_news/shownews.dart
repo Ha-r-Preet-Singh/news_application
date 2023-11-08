@@ -85,7 +85,7 @@ class _ShowNewsState extends State<ShowNews> {
                               color: colorWhite,
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            child: Center(
+                            child:const Center(
                                 child: Icon(
                               Icons.arrow_back_ios_new_rounded,
                               color: colorBlack,
@@ -115,9 +115,9 @@ class _ShowNewsState extends State<ShowNews> {
                               ),
                               child: Center(
                                   child: Icon(
-                                Icons.upload_outlined,
-                                color: colorBlack,
-                              )),
+                                    Icons.upload_outlined,
+                                    color: colorBlack,
+                                  )),
                             ),
                             wSpacer(mWidth: media.size.width * .01),
                             Stack(children: [
@@ -130,9 +130,9 @@ class _ShowNewsState extends State<ShowNews> {
                                 ),
                                 child: Center(
                                     child: Icon(
-                                  Icons.switch_camera_outlined,
-                                  color: colorBlack,
-                                )),
+                                      Icons.switch_camera_outlined,
+                                      color: colorBlack,
+                                    )),
                               ),
                               Positioned(
                                   left: 25,
@@ -155,37 +155,41 @@ class _ShowNewsState extends State<ShowNews> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 14,
-                    ),
-                    wSpacer(),
-                    Text(
-                      name == null ? "Unknown Publisher" : "${name}",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    wSpacer(),
-                    CircleAvatar(
-                      radius: 1,
-                      backgroundColor: colorBlack,
-                    ),
-                    wSpacer(),
-                    Text(
-                      author==null ? "Unknown Author" : "${author}",
-                      style: TextStyle(fontSize: 15, color: colorBlack),
-                    ),
-                    // wSpacer(),
-                    // CircleAvatar(
-                    //   radius: 1,
-                    //   backgroundColor: colorBlack,
-                    // ),
-                    // wSpacer(),
-                    // Text(
-                    //   "name",
-                    //   style: TextStyle(fontSize: 18, color: colorBlack),
-                    // ),
-                  ],
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                   const   CircleAvatar(
+                        radius: 14,
+                       backgroundColor: colorButton,
+                      ),
+                      wSpacer(),
+                      Text(
+                        name == null ? "Unknown Publisher" : "${name}",
+                        style:const TextStyle(fontSize: 18),
+                      ),
+                      wSpacer(),
+                    const  CircleAvatar(
+                        radius: 1,
+                        backgroundColor: colorBlack,
+                      ),
+                      wSpacer(),
+                      Text(
+                        author==null ? "Unknown Author" : "${author}",
+                        style:const TextStyle(fontSize: 15, color: colorBlack),
+                      ),
+                      // wSpacer(),
+                      // CircleAvatar(
+                      //   radius: 1,
+                      //   backgroundColor: colorBlack,
+                      // ),
+                      // wSpacer(),
+                      // Text(
+                      //   "name",
+                      //   style: TextStyle(fontSize: 18, color: colorBlack),
+                      // ),
+                    ],
+                  ),
                 ),
               ),
               hSpacer(),
@@ -193,7 +197,7 @@ class _ShowNewsState extends State<ShowNews> {
                 padding:  EdgeInsets.only(top: 10, left: 15, right: 15),
                 child: Text(
                   title==null ? "Unknown title" : "${title}",
-                  style: TextStyle(
+                  style:const TextStyle(
                       color: colorBlack,
                       fontWeight: FontWeight.w700,
                       fontSize: 20),
@@ -228,7 +232,7 @@ class _ShowNewsState extends State<ShowNews> {
                 padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
                 child: Text(
                     content ==null ? "" :" ${content}",maxLines: 443,
-                  style: TextStyle(
+                  style:const TextStyle(
                       color: colorBlack,
                       fontWeight: FontWeight.w300,
                       fontSize: 18),
@@ -240,7 +244,7 @@ class _ShowNewsState extends State<ShowNews> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Read more at",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                 const   Text("Read more at",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
                     InkWell(
                       onTap: () {
                         String fetchedUrl = newsUrl.toString();
@@ -281,7 +285,7 @@ class _ShowNewsState extends State<ShowNews> {
           backgroundColor: colorWhite,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50),
-              side: BorderSide(color: colorWhite)),
+              side:const BorderSide(color: colorWhite)),
           elevation: 12,
           onPressed: () {},
           child: Padding(
@@ -296,7 +300,7 @@ class _ShowNewsState extends State<ShowNews> {
                     color: colorGrey.withOpacity(.2),
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Center(
+                  child:const Center(
                     child: Center(
                         child: Icon(
                       Icons.heart_broken_outlined,
@@ -304,7 +308,7 @@ class _ShowNewsState extends State<ShowNews> {
                     )),
                   ),
                 ),
-                Text(
+             const   Text(
                   "6.7k",
                   style: TextStyle(color: colorBlack),
                 ),
@@ -315,7 +319,7 @@ class _ShowNewsState extends State<ShowNews> {
                     color: colorGrey.withOpacity(.2),
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Center(
+                  child:const Center(
                     child: Center(
                         child: Icon(
                       Icons.event_note_outlined,
@@ -323,7 +327,7 @@ class _ShowNewsState extends State<ShowNews> {
                     )),
                   ),
                 ),
-                Text(
+             const   Text(
                   "12k",
                   style: TextStyle(color: colorBlack),
                 ),
@@ -334,7 +338,7 @@ class _ShowNewsState extends State<ShowNews> {
                     color: colorButton,
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Center(
+                  child:const Center(
                     child: Center(
                         child: Icon(
                       Icons.headset_outlined,

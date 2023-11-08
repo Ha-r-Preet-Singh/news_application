@@ -8,7 +8,7 @@ class NewsInitialState extends NewsState {}
 class NewsLoadingState extends NewsState {}
 
 class NewsErrorState extends NewsState {
-  String errorMsg;
+  String? errorMsg;
   NewsErrorState({required this.errorMsg});
 }
 
